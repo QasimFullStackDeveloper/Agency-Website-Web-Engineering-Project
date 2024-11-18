@@ -5,6 +5,8 @@
   --gray-color: #7d7d7d;
   --green-color: #00d085;
   --blue-color: #267dff;
+  --small-font-size: 14px;
+  --base-font-size: 16px;
 }
 
 * {
@@ -12,3 +14,60 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Navbar Section CSS Start */
+.topbar {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: var(--small-font-size);
+  font-family: 'Onest', sans-serif;
+}
+
+.topbar .separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--secondary-color);
+}
+
+.navbar-light .nav-link.active {
+  color: var(--primary-color);
+}
+
+.navbar-light .nav-link:hover {
+  color: #7b4fd8;
+}
+
+.btn-quote {
+  width: 161px;
+  height: 48px;
+  background-color: #9867ff;
+  color: white;
+  border-radius: 28px;
+  padding: 6px;
+  font-size: 14px;
+  box-shadow: 0px 4px 8px rgba(152, 103, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-quote .icon {
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  color: #9867ff;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.btn-quote:hover {
+  background-color: #7b4fd8;
+  color: white;
+  box-shadow: 0px 6px 12px rgba(123, 79, 216, 0.2);
+}
+/* Navbar Section CSS End */
