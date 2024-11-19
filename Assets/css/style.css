@@ -11,4 +11,80 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var();
 }
+
+/* this is the beginning of 404 page*/
+#errorBody{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.main { 
+  width: 400px;
+  height: 362px;
+ 
+}
+
+.header {
+  color: #9867FF;
+  font-size: 140px ;
+  font-family: Sora;
+  text-align: center;
+  margin-top: 30px ;
+  margin: 0;
+  
+}
+
+.heading2{
+  size: 24px;
+  color: #222737;
+  font-family: sora;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.para{
+  color:  #7D7D7D;
+  font-family: Poppins;
+  size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.back_button{
+  text-align: center;
+  display: inline-block;
+  background-color: #9867FF;
+  color: white;
+  padding: 10px 30px 08px 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.back_button span{
+  display: inline-block;
+  
+  color: #9867FF;
+  size: 3px;
+  background-color: white;
+  margin-right: 10px;
+  margin-left: 02px;
+  width: 30px;
+  height: 30px;
+  left: 6px;
+  top: 6px;
+  align-content: center;
+  transform: rotate(320deg);
+  border-radius: 18px;
+}
+/* this is the end of 404 page*/
