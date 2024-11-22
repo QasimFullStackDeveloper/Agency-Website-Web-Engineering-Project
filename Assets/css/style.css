@@ -11,4 +11,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family: Sora; */
+}
+/* About Page CSS */
+.primary-colors{
+  color: var(--primary-color) !important;
+}
+.bg-primary-color{
+  background-color: var(--primary-color) !important;
+}
+.secondary-colors{
+  color: var(--secondary-color);
+}
+.Gray-colors{
+  color: var(--gray-color) !important;
+}
+.btn-icon-transform{
+  transform: rotate(-45deg);
+}
+.bg-Image{
+  background-image: url('../images/About_Page_Images/Background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
