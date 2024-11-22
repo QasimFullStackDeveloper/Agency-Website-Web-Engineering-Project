@@ -139,7 +139,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid white;
+  border: 1px solid var(--white-color);
   border-radius: 50%;
   color: var(--white-color);
   margin-right: 10px;
@@ -168,8 +168,8 @@
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: black;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -183,3 +183,36 @@
   background-color: #222737;
 }
 /* Footer Section CSS End */
+
+/* Services Section CSS Start */
+.services-grid .card {
+  width: 410px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+  border: none;
+  font-family: 'Poppins', sans-serif !important;
+  transition: 0.3s all ease;
+}
+
+.services-grid .card:hover {
+  scale: 1.02;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.services-grid .card .card-body h5 {
+  font-family: 'Sora', sans-serif;
+  color: var(--secondary-color);
+}
+
+.services-grid .card .card-body p {
+  font-size: var(--base-font-size);
+  color: var(--gray-color);
+}
+
+.services-grid .card .card-body a {
+  color: var(--primary-color);
+  font-weight: 600 !important;
+  font-size: var(--small-font-size);
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 4px;
+}
+/* Services Section CSS End */
