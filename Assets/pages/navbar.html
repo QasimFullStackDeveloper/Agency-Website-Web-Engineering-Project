@@ -1,24 +1,37 @@
 <!-- Topbar Section Start -->
 <div class="topbar py-2">
-  <div class="container d-flex justify-content-between">
-    <!-- Left Side Section: Address and Phone -->
-    <div class="d-flex align-items-center">
-      <img
-        src="/assets/images/icons/location.svg"
-        alt="location"
-        class="mt-1" />
-      <span class="ms-2">6391 Elgin St. Celina, Delaware 10299, USA</span>
-      <span class="separator mx-3">|</span>
-      <img src="/assets/images/icons/phone.svg" alt="phone" class="mt-1" />
-      <span class="ms-2">(+12) 3456 7890</span>
-    </div>
+  <div class="container">
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center">
+      <!-- Left Side Section: Address and Phone -->
+      <div
+        class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center mb-2 mb-lg-0 justify-content-between">
+        <div class="d-flex align-items-center mb-2 mb-sm-0">
+          <img
+            src="/assets/images/icons/location.svg"
+            alt="location"
+            class="mt-1" />
+          <span class="ms-2">6391 Elgin St. Celina, Delaware</span>
+          <span class="separator d-none d-lg-inline mx-3">|</span>
+        </div>
+        <div class="d-flex align-items-center ms-sm-3">
+          <img src="/assets/images/icons/phone.svg" alt="phone" class="mt-1" />
+          <span class="ms-2">(+12) 3456 7890</span>
+        </div>
+      </div>
 
-    <!-- Right Side Section: Email and Language -->
-    <div class="d-flex align-items-center">
-      <img src="/assets/images/icons/mail.svg" alt="mail" class="mt-1" />
-      <span class="ms-2">recruitie.infor@example.com</span>
-      <span class="separator mx-3">|</span>
-      <span>ENG</span>
+      <!-- Right Side Section: Email and Language -->
+      <div
+        class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between">
+        <div class="d-flex align-items-center mb-2 mb-sm-0">
+          <img src="/assets/images/icons/mail.svg" alt="mail" class="mt-1" />
+          <span class="ms-2">recruitie.infor@example.com</span>
+          <span class="separator d-none d-lg-inline mx-3">|</span>
+        </div>
+        <div class="d-flex align-items-center ms-sm-3">
+          <span>ENG</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -69,8 +82,8 @@
       <!-- Quote Button -->
       <a
         href="#"
-        class="btn btn-quote ms-3 fw-medium d-flex align-items-center">
-        <span class="icon d-flex justify-content-center align-items-center"
+        class="btn btn-quote ms-0 ms-lg-3 fw-medium d-flex align-items-center justify">
+        <span class="icon d-flex justify-content-center align-items-center me-2"
           ><img src="/assets/images/icons/arrow.svg" alt="arrow"
         /></span>
         Get A Quote

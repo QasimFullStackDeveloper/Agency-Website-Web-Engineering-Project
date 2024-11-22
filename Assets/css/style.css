@@ -7,6 +7,7 @@
   --blue-color: #267dff;
   --small-font-size: 14px;
   --base-font-size: 16px;
+  --large-font-size: 18px;
 }
 
 * {
@@ -43,31 +44,142 @@
   color: #7b4fd8;
 }
 
-.btn-quote {
+.btn-quote,
+.btn-subscribe {
   width: 161px;
   height: 48px;
-  background-color: #9867ff;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 28px;
   padding: 6px;
-  font-size: 14px;
+  font-size: var(--small-font-size);
   box-shadow: 0px 4px 8px rgba(152, 103, 255, 0.3);
   transition: all 0.3s ease;
 }
 
-.btn-quote .icon {
+.btn-quote .icon,
+.btn-subscribe .icon {
   width: 36px;
   height: 36px;
-  background-color: white;
-  color: #9867ff;
+  background-color: var(--white-color);
   border-radius: 50%;
-  margin-right: 12px;
-  font-size: 14px;
+  font-size: var(--small-font-size);
 }
 
 .btn-quote:hover {
   background-color: #7b4fd8;
-  color: white;
+  color: var(--white-color);
   box-shadow: 0px 6px 12px rgba(123, 79, 216, 0.2);
 }
 /* Navbar Section CSS End */
+
+/* Footer Section CSS Start */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 60px;
+}
+
+.footer .footer-description {
+  font-size: var(--base-font-size);
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Subscribe Button */
+.footer .input-group {
+  max-width: 380px;
+  border-radius: 156px;
+  background-color: var(--white-color);
+}
+
+.input-group input {
+  border-radius: 156px;
+  padding: 14px 20px;
+  font-size: var(--small-font-size);
+}
+
+.input-group .btn {
+  width: 173px;
+  height: 44px;
+  background-color: var(--secondary-color);
+  transform: translateX(-3px);
+}
+
+.btn-subscribe .icon {
+  color: var(--secondary-color) !important;
+}
+
+/* Footer Links */
+.footer .footer-links h6 {
+  font-size: var(--large-font-size);
+}
+
+.footer .footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer .footer-links ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.footer .footer-links ul li a:hover {
+  filter: drop-shadow(0 0 1px #9f9f9f);
+  font-size: 15px;
+}
+
+/* Social Icons */
+.footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: var(--white-color);
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.2s all ease;
+}
+
+.footer .social-icons a:hover {
+  scale: 1.1;
+}
+
+/* Divider */
+.footer .divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Copyright */
+.footer .copyright {
+  font-size: var(--small-font-size);
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #222737;
+}
+/* Footer Section CSS End */
