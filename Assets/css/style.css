@@ -15,6 +15,231 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family: Sora; */
+}
+
+/* this is the beginning of 404 page*/
+#errorBody{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.errorMain { 
+  width: 400px;
+  height: 362px;
+ 
+}
+
+.header {
+  color: var(--primary-color);
+  font-size: 140px ;
+  font-family: Sora;
+  text-align: center;
+  margin-top: 30px ;
+  margin: 0;
+  
+}
+
+.heading2{
+  font-size: 24px;
+  color: #222737;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.para{
+  color:  #7D7D7D;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.back_button{
+  text-align: center;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 30px 08px 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.back_button span{
+  display: inline-block;
+  
+  color: var(--primary-color);
+  size: 3px;
+  background-color: var(--white-color);
+  margin-right: 10px;
+  margin-left: 02px;
+  width: 30px;
+  height: 30px;
+  left: 6px;
+  top: 6px;
+  align-content: center;
+  transform: rotate(320deg);
+  border-radius: 18px;
+}
+/* this is the end of 404 page*/
+
+/* this is the beginning of FAQ page*/
+
+.faqMain {
+  display: flex;
+}
+
+.faqEnd {
+  height: 532px;
+  text-align: center;
+  background: url('/Assets/images/faq/faqBackground.png') ;
+  margin-bottom: 50px;
+}
+
+.start-button{
+  text-align: center;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 30px 08px 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.start-button span{
+  display: inline-block;
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  margin-right: 10px;
+  margin-left: 02px;
+  width: 30px;
+  height: 30px;
+  left: 6px;
+  top: 6px;
+  align-content: center;
+  transform: rotate(320deg);
+  border-radius: 18px;
+}
+
+/* this is the Ending of FAQ page*/
+
+
+/* this is the beginning of FAQ page*/
+
+
+
+
+
+/* this is the Ending of Case Studies page*/
+/* About Page CSS */
+.primary-colors{
+  color: var(--primary-color) !important;
+}
+.bg-primary-color{
+  background-color: var(--primary-color) !important;
+}
+.secondary-colors{
+  color: var(--secondary-color);
+}
+.Gray-colors{
+  color: var(--gray-color) !important;
+}
+.btn-icon-transform{
+  transform: rotate(-45deg);
+}
+.bg-Image{
+  background-image: url('../images/About_Page_Images/Background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Blog Detail Page CSS */
+.search-box {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+.categories ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.comment-section h4 {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+.comment {
+  display: flex;
+  align-items:start;
+  gap: 15px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.comment img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.comment-content {
+  flex: 1;
+}
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment-header h6 {
+  font-weight: bold;
+  margin: 0;
+}
+.comment-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+.reply-btn {
+  background-color: #7a5ff4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.reply-form {
+  margin-top: 30px;
+}
+
+.reply-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.reply-form button {
+  background-color: #7a5ff4;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.reply-form button:hover {
+  background-color: #5e44c3;
 }
 
 .form-control:focus {
