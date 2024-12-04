@@ -372,8 +372,259 @@
     padding: 3rem;
   }
 
-  /* .subscribe-section .btn-subscribe {
-    width: 150px;
-  } */
 }
 /* Services Section CSS End */
+/* home css */
+/* .bg_home{
+  background: url(/Assets/images/Home_Page_Image/bg_home.png) cover no-repeat;
+  height: 500px;
+  width: 100%;
+} */
+ /* Hero Section */
+ .hero {
+  background-image: url(../images/Home_Page_Image/bg_home.png);
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2c2c2c;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #6c6c6c;
+  margin: 20px 0;
+}
+
+.hero .btn-learn-more {
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  background: #7a5ff4;
+  color: white;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.hero .btn-learn-more:hover {
+  background: #6848e3;
+  text-decoration: none;
+}
+
+.hero .tags {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero .tag {
+  background-color: #eaeaea;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #2c2c2c;
+}
+
+/* Image Floating Styles */
+.floating-img {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.img-1 {
+  top: 20%;
+  left: 10%;
+  transform: rotate(-10deg);
+}
+
+.img-2 {
+  bottom: 20%;
+  left: 15%;
+  transform: rotate(10deg);
+}
+
+.img-3 {
+  top: 15%;
+  right: 10%;
+  transform: rotate(15deg);
+}
+
+.img-4 {
+  bottom: 25%;
+  right: 15%;
+  transform: rotate(-15deg);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 32px;
+  }
+
+  .floating-img {
+      width: 90px;
+  }
+}
+.callback-section {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* min-height: 100vh; */
+  /* padding: 50px 20px; */
+  height: 100px;
+}
+
+.form-wrapper {
+  /* border-radius: 10px; */
+  /* padding: 30px; */
+  color: #2c3e50;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-image: url(../images/Home_Page_Image/form_bg.png);
+  background-repeat: no-repeat;
+  height: 600px;
+  background-size: cover;
+
+}
+
+.callback-section h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.callback-section p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.callback-section input,
+.callback-section select,
+.callback-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.callback-section textarea {
+  resize: none;
+}
+
+.callback-section button {
+  background-color: #7a5ff4;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.callback-section button:hover {
+  background-color: #5e44c3;
+}
+
+.callback-section .image-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .callback-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .callback-section .form-wrapper {
+      margin-bottom: 30px;
+      max-width: 100%;
+  }
+}
+/* article */
+.card-container {
+  padding: 50px 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  /* background-color: #222; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.category {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #7a5ff4;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  font-size: 14px;
+  color: #7a5ff4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .card {
+      margin-bottom: 30px;
+  }
+}
