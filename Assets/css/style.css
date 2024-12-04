@@ -19,32 +19,29 @@
 }
 
 /* this is the beginning of 404 page*/
-#errorBody{
+#errorBody {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
-.errorMain { 
+.errorMain {
   width: 400px;
   height: 362px;
- 
 }
 
 .header {
   color: var(--primary-color);
-  font-size: 140px ;
+  font-size: 140px;
   font-family: Sora;
   text-align: center;
-  margin-top: 30px ;
+  margin-top: 30px;
   margin: 0;
-  
 }
 
-.heading2{
+.heading2 {
   font-size: 24px;
   color: #222737;
   font-weight: 600;
@@ -53,14 +50,14 @@
   margin-top: 30px;
 }
 
-.para{
-  color:  #7D7D7D;
+.para {
+  color: #7d7d7d;
   line-height: 30px;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.back_button{
+.back_button {
   text-align: center;
   display: inline-block;
   background-color: var(--primary-color);
@@ -71,9 +68,9 @@
   margin-right: 20px;
 }
 
-.back_button span{
+.back_button span {
   display: inline-block;
-  
+
   color: var(--primary-color);
   size: 3px;
   background-color: var(--white-color);
@@ -98,11 +95,11 @@
 .faqEnd {
   height: 532px;
   text-align: center;
-  background: url('/Assets/images/faq/faqBackground.png') ;
+  background: url('/Assets/images/faq/faqBackground.png');
   margin-bottom: 50px;
 }
 
-.start-button{
+.start-button {
   text-align: center;
   display: inline-block;
   background-color: var(--primary-color);
@@ -114,7 +111,7 @@
   font-family: Arial, sans-serif;
 }
 
-.start-button span{
+.start-button span {
   display: inline-block;
   color: var(--primary-color);
   background-color: var(--white-color);
@@ -131,31 +128,26 @@
 
 /* this is the Ending of FAQ page*/
 
-
 /* this is the beginning of FAQ page*/
-
-
-
-
 
 /* this is the Ending of Case Studies page*/
 /* About Page CSS */
-.primary-colors{
+.primary-colors {
   color: var(--primary-color) !important;
 }
-.bg-primary-color{
+.bg-primary-color {
   background-color: var(--primary-color) !important;
 }
-.secondary-colors{
+.secondary-colors {
   color: var(--secondary-color);
 }
-.Gray-colors{
+.Gray-colors {
   color: var(--gray-color) !important;
 }
-.btn-icon-transform{
+.btn-icon-transform {
   transform: rotate(-45deg);
 }
-.bg-Image{
+.bg-Image {
   background-image: url('../images/About_Page_Images/Background.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,7 +172,7 @@
 }
 .comment {
   display: flex;
-  align-items:start;
+  align-items: start;
   gap: 15px;
   padding: 20px;
   background: #fff;
@@ -493,7 +485,6 @@
     text-align: center;
     padding: 3rem;
   }
-
 }
 /* Services Section CSS End */
 /* home css */
@@ -502,13 +493,12 @@
   height: 500px;
   width: 100%;
 } */
- /* Hero Section */
- .hero {
+/* Hero Section */
+.hero {
   background-image: url(../images/Home_Page_Image/bg_home.png);
   height: 650px;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .hero h1 {
@@ -592,11 +582,11 @@
 
 @media (max-width: 768px) {
   .hero h1 {
-      font-size: 32px;
+    font-size: 32px;
   }
 
   .floating-img {
-      width: 90px;
+    width: 90px;
   }
 }
 .callback-section {
@@ -617,7 +607,6 @@
   background-repeat: no-repeat;
   height: 600px;
   background-size: cover;
-
 }
 
 .callback-section h2 {
@@ -674,13 +663,13 @@
 
 @media (max-width: 991px) {
   .callback-section {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .callback-section .form-wrapper {
-      margin-bottom: 30px;
-      max-width: 100%;
+    margin-bottom: 30px;
+    max-width: 100%;
   }
 }
 /* article */
@@ -701,7 +690,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.card img {
+.blog-cards img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -747,7 +736,7 @@
 
 @media (max-width: 991px) {
   .card {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
   }
 }
 /* card */
