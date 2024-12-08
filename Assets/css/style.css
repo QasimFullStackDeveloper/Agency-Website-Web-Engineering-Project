@@ -6,6 +6,7 @@
   --green-color: #00d085;
   --blue-color: #267dff;
   --light-gray-color: #e1e8ff;
+  --smaller-font-size: 12px;
   --small-font-size: 14px;
   --base-font-size: 16px;
   --large-font-size: 18px;
@@ -487,9 +488,10 @@ input{
 }
 /* Footer Section CSS End */
 
-/* Services Section CSS Start */
-.services-grid .card {
-  width: 410px;
+/* Blogs, Services Section CSS Start */
+.services-grid .card,
+.blogs-grid .blogs-card {
+  /* width: 410px; */
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
   border: none;
   font-family: 'Poppins', sans-serif !important;
@@ -497,22 +499,26 @@ input{
   transition: 0.3s all ease;
 }
 
-.services-grid .card:hover {
+.services-grid .card:hover,
+.blogs-grid .blogs-card:hover {
   scale: 1.02;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
 }
 
-.services-grid .card .card-body h5 {
+.services-grid .card .card-body h5,
+.blogs-grid .blogs-card .blogs-card-body h5 {
   font-family: 'Sora', sans-serif;
   color: var(--secondary-color);
 }
 
-.services-grid .card .card-body p {
+.services-grid .card .card-body p,
+.blogs-grid .blogs-card .blogs-card-body p {
   font-size: var(--base-font-size);
   color: var(--gray-color);
 }
 
-.services-grid .card .card-body a {
+.services-grid .card .card-body a,
+.blogs-grid .blogs-card .blogs-card-body a {
   color: var(--primary-color);
   font-weight: 600 !important;
   font-size: var(--small-font-size);
@@ -545,13 +551,35 @@ input{
     padding: 3rem;
   }
 }
-/* Services Section CSS End */
+/* Blogs, Services Section CSS End */
+
+/* Blog Section CSS Start */
+.category {
+  padding: 6px 14px;
+  background-color: rgba(152, 103, 255, 0.1);
+  color: var(--primary-color);
+  font-size: var(--smaller-font-size);
+}
+
+.pagination .page-item {
+  width: 40px;
+  height: 40px;
+  font-size: var(--large-font-size);
+}
+
+.pagination .page-item a {
+  border: none;
+  color: black;
+  transition: 0.3s all ease;
+}
+
+.pagination .page-item a:hover {
+  background: none;
+  transform: translateY(-2px);
+}
+/* Blog Section CSS End */
+
 /* home css */
-/* .bg_home{
-  background: url(/Assets/images/Home_Page_Image/bg_home.png) cover no-repeat;
-  height: 500px;
-  width: 100%;
-} */
 /* Hero Section */
 .hero {
   background-image: url(../images/Home_Page_Image/bg_home.png);
@@ -757,17 +785,6 @@ input{
 
 .card-body {
   padding: 20px;
-}
-
-.category {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 5px 10px;
-  background-color: #7a5ff4;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 20px;
-  text-transform: uppercase;
 }
 
 .card-title {
