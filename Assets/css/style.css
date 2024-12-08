@@ -128,7 +128,66 @@
 
 /* this is the Ending of FAQ page*/
 
-/* this is the beginning of FAQ page*/
+/* this is the beginning of Contact Us page*/
+
+.contactUs{
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.Send_Message{
+  text-align: center;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 30px 08px 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+input{
+  width: 320px;
+  height: 55px;
+  border-radius: 10px;
+  margin: 10px;
+  padding-left: 10px;
+  border-color: var(--gray-color);
+}
+.email_form{
+  width: 660px;
+}
+.message_form{
+  width: 660px;
+  height: 224px;
+  text-wrap: 0;
+}
+.Contact_form{
+  margin-left: 60px;
+}
+.Send_Message span {
+  display: inline-block;
+
+  color: var(--primary-color);
+  size: 3px;
+  background-color: var(--white-color);
+  margin-right: 10px;
+  margin-left: 02px;
+  width: 30px;
+  height: 30px;
+  left: 6px;
+  top: 6px;
+  align-content: center;
+  transform: rotate(320deg);
+  border-radius: 18px;
+}
+
+.g_map{
+  margin-top: 30px;
+}
+
+
 
 /* this is the Ending of Case Studies page*/
 /* About Page CSS */
