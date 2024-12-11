@@ -88,36 +88,13 @@
 
 /* this is the beginning of Contact Us page*/
 
-input {
-  width: 320px;
-  height: 55px;
-  border-radius: 10px;
-  margin: 10px;
+.Contact_form input {
+  padding: 15px 0;
   padding-left: 10px;
+}
+
+.Contact_form input {
   border: 1px solid var(--light-gray-color) !important;
-}
-
-.contactUs {
-  margin-top: 10vh;
-}
-
-#message_sec {
-  border: 1px solid var(--light-gray-color);
-  border-radius: 12px;
-  margin-left: 10px;
-}
-
-.Send_Message {
-  text-align: center;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-}
-
-.g_map {
-  margin-top: 30px;
 }
 
 .btn-send {
