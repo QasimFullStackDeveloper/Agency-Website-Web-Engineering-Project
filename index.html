@@ -25,7 +25,7 @@
 <body>
   <!-- Dynamic Navbar Will Come Here Using JavaScript/Jquery -->
   <!-- Navbar Section Start -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transperant">
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand" href="#">
@@ -84,13 +84,13 @@
   <!-- Hero Section -->
   <section class="hero align-content-center text-center pb-5">
     <!-- Hero Content -->
-    <div class="container pb-5">
+    <div class="container p-5">
       <h1 class=" secondary-colors fw-bold ">
         Best Solution To Get <span class="d-sm-block d-inline">Good Employees</span>
       </h1>
       <p class="Gray-colors">
         Social creatures, living in prides led by a dominant male. They rely on <span
-          class="d-lg-block d-inline">teamwork during hunts, showcasing their exceptional hunting skills.</span>
+          class="d-md-block d-inline">teamwork during hunts, showcasing their exceptional hunting skills.</span>
       </p>
       <div class="d-flex justify-content-center">
         <a href="#" class="btn btn-quote  fw-medium d-flex align-items-center justify">
@@ -365,7 +365,8 @@
   </div>
   <!-- Find the Best Talents Card... -->
   <div class="container my-5">
-    <div class=" bg-subscribe-section d-flex flex-column flex-md-row align-items-center justify-content-between">
+    <div
+      class="bg-subscribe d-flex flex-column flex-md-row align-items-center justify-content-between">
       <!-- Left Content -->
       <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
         <h1 class="subscribe-title fs-1 fw-semibold lh-base">
@@ -382,10 +383,18 @@
         </p>
         <!-- Sucscribe Button -->
         <div class="input-group align-items-center">
-          <input type="email" class="form-control rounded-5 border-0" placeholder="Enter email" />
-          <a href="#" class="btn bg-secondary-colors btn-subscribe d-flex align-items-center rounded-5">
-            <span class="icon d-flex justify-content-center align-items-center me-2"><img
-                src="/assets/images/icons/arrow.svg" alt="arrow" /></span>
+          <input
+            type="email"
+            class="form-control rounded-5 border-0"
+            placeholder="Enter email" />
+
+          <a
+            href="#"
+            class="btn btn-subscribe-purple btn-subscribe d-flex align-items-center rounded-5">
+            <span
+              class="icon d-flex justify-content-center align-items-center me-2"
+              ><img src="/assets/images/icons/arrow.svg" alt="arrow"
+            /></span>
             Subscribe Now
           </a>
         </div>
@@ -482,7 +491,7 @@
     <div class="container-lg container-md container-sm container">
       <div class="row">
         <!-- Form Section -->
-        <div class="col-lg-6 col-md-6 col-sm-9 py-5">
+        <div class="col-lg-6 col-md-6 col-sm-10 py-5">
           <p class="primary-colors mb-0">/ get a quote /</p>
           <p class="h2 secondary-colors fw-bold" style="font-family: Sora">Request A Call Back</p>
           <p class="Gray-colors">Contact to us when you have questions for our solution or something elses.</p>
@@ -511,7 +520,7 @@
                 <img src="/assets/images/icons/arrow.svg" alt="arrow" /></span>Send Request</a>
           </form>
         </div>
-        <div class="col-lg-6 col-md-5 col-sm-8 ">
+        <div class="col-lg-6 col-md-6 col-sm-8 d-none d-md-inline">
           <img src="/Assets/images/Home_Page_Image/callback.svg" class="img-fluid h-100" alt="">
         </div>
       </div>
@@ -603,6 +612,19 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- My Custom Script -->
   <script src="./assets/js/script.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        var navbar = $('.navbar');
+        if ($(window).scrollTop() > 40) 
+        {
+          navbar.addClass('scrolled');
+        } else {
+          navbar.removeClass('scrolled');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
