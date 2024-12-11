@@ -47,14 +47,6 @@
 
 /* this is the beginning of FAQ page*/
 
-/* .faqEnd {
-  height: 532px;
-  text-align: center;
-  background: url('/Assets/images/faq/faqBackground.png');
-  margin-bottom: 50px;
-} */
-
-
 .faqEnd {
   height: 532px;
   text-align: center;
@@ -68,7 +60,6 @@
   .faqEnd {
       height: 400px;
       margin-bottom: 40px;
-      /* Maintain background aspect ratio and center it */
       background-size: contain;
       background-position: center;
   }
