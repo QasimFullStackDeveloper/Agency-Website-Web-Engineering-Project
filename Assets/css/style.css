@@ -5,6 +5,7 @@
   --gray-color: #7d7d7d;
   --green-color: #00d085;
   --blue-color: #267dff;
+  --light-gray-color: #E3E3E3;
   --light-gray-color: #e1e8ff;
   --smaller-font-size: 12px;
   --small-font-size: 14px;
@@ -20,133 +21,81 @@
 }
 
 /* this is the beginning of 404 page*/
-#errorBody {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.errorMain {
-  width: 400px;
-  height: 362px;
-}
-
 .header {
   color: var(--primary-color);
   font-size: 140px;
-  font-family: Sora;
-  text-align: center;
-  margin-top: 30px;
-  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .header {
+    font-size: calc(9vw + 40px);
+  }
 }
 
 .heading2 {
   font-size: 24px;
   color: #222737;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: center;
-  margin-top: 30px;
 }
 
 .para {
   color: #7d7d7d;
-  line-height: 30px;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.back_button {
-  text-align: center;
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 30px 08px 5px;
-  border-radius: 25px;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-.back_button span {
-  display: inline-block;
-  color: var(--primary-color);
-  size: 3px;
-  background-color: var(--white-color);
-  margin-right: 10px;
-  margin-left: 02px;
-  width: 30px;
-  height: 30px;
-  left: 6px;
-  top: 6px;
-  align-content: center;
-  transform: rotate(320deg);
-  border-radius: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--base-font-size);
 }
 
 /* this is the end of 404 page*/
 
 /* this is the beginning of FAQ page*/
 
-.faqMain {
-  display: flex;
-}
-
-.faqEnd {
+/* .faqEnd {
   height: 532px;
   text-align: center;
   background: url('/Assets/images/faq/faqBackground.png');
   margin-bottom: 50px;
-}
+} */
 
-.start-button {
+
+.faqEnd {
+  height: 532px;
   text-align: center;
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 10px 30px 08px 5px;
-  border-radius: 25px;
-  text-decoration: none;
-  margin-right: 20px;
-  font-family: Arial, sans-serif;
+  background: url('/Assets/images/faq/faqBackground.png') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 50px;
 }
 
-.start-button span {
-  display: inline-block;
-  color: var(--primary-color);
-  background-color: var(--white-color);
-  margin-right: 10px;
-  margin-left: 02px;
-  width: 30px;
-  height: 30px;
-  left: 6px;
-  top: 6px;
-  align-content: center;
-  transform: rotate(320deg);
-  border-radius: 18px;
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .faqEnd {
+      height: 400px;
+      margin-bottom: 40px;
+      /* Maintain background aspect ratio and center it */
+      background-size: contain;
+      background-position: center;
+  }
 }
+
+@media (max-width: 768px) {
+  .faqEnd {
+      height: 300px;
+      margin-bottom: 30px;
+      background-size: contain;
+      background-position: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .faqEnd {
+      height: 250px;
+      margin-bottom: 20px;
+      background-size: contain;
+      background-position: center;
+  }
+}
+
 
 /* this is the Ending of FAQ page*/
 
 /* this is the beginning of Contact Us page*/
-
-.contactUs{
-  display: flex;
-  justify-content: center;
-  margin-top: 10vh;
-}
-
-.Send_Message{
-  text-align: center;
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 30px 08px 5px;
-  border-radius: 25px;
-  text-decoration: none;
-  margin-right: 20px;
-}
 
 input{
   width: 320px;
@@ -154,38 +103,34 @@ input{
   border-radius: 10px;
   margin: 10px;
   padding-left: 10px;
-  border-color: var(--gray-color);
-}
-.email_form{
-  width: 660px;
-}
-.message_form{
-  width: 660px;
-  height: 224px;
-  text-wrap: 0;
-}
-.Contact_form{
-  margin-left: 60px;
-}
-.Send_Message span {
-  display: inline-block;
-
-  color: var(--primary-color);
-  size: 3px;
-  background-color: var(--white-color);
-  margin-right: 10px;
-  margin-left: 02px;
-  width: 30px;
-  height: 30px;
-  left: 6px;
-  top: 6px;
-  align-content: center;
-  transform: rotate(320deg);
-  border-radius: 18px;
+  border: 1px solid var(--light-gray-color) !important;
 }
 
-.g_map{
+.contactUs {
+  margin-top: 10vh;
+}
+
+#message_sec {
+  border: 1px solid var(--light-gray-color);
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+.Send_Message {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.g_map {
   margin-top: 30px;
+}
+
+.btn-send {
+  width: 181px !important;
 }
 
 
@@ -346,6 +291,7 @@ input{
   color: #7b4fd8;
 }
 
+
 .btn-quote,
 .btn-subscribe {
   width: 161px;
@@ -353,7 +299,7 @@ input{
   background-color: var(--primary-color);
   color: white;
   border-radius: 28px;
-  /* padding: 6px; */
+  padding: 6px;
   font-size: var(--small-font-size);
   box-shadow: 0px 4px 8px rgba(152, 103, 255, 0.3);
   transition: all 0.3s ease;
