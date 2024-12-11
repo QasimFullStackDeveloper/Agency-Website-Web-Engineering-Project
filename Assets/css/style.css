@@ -257,7 +257,9 @@
   font-size: var(--small-font-size);
   font-family: 'Onest', sans-serif;
 }
-
+.scrolled{
+    background-color: var(--white-color); 
+}
 .topbar .separator {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -487,10 +489,8 @@
   color: var(--white-color);
   font-family: 'Sora', sans-serif;
 }
-.bg-subscribe-section {
-  background-image: url('/assets/images/Home_Page_Image/bg_blog.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.bg-subscribe {
+  background: url('/assets/images/Home_Page_Image/bg_blog.svg') no-repeat center center / cover;
   padding: 5rem 8rem;
   border-radius: 15px;
   color: var(--white-color);
@@ -511,8 +511,11 @@
     text-align: center;
     padding: 3rem;
   }
+  .bg-subscribe{
+    text-align: center;
+    padding: 3rem;
+  }
 }
-
 /* Blogs, Services Section CSS End */
 
 /* Blog Section CSS Start */
@@ -544,8 +547,9 @@
 /* home css */
 /* Hero Section */
 .hero {
-  background-image: url(../images/Home_Page_Image/bg_home.png);
+  background-image: url(/Assets/images/Home_Page_Image/bg_home.svg);
   height: 550px;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -556,6 +560,21 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .hero {
+    height: 500px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 500px;
+    background-size: contain;
+    background-position: top;
+  }
+}
+
 /* card */
 .blue {
   background-color: var(--blue-color);
