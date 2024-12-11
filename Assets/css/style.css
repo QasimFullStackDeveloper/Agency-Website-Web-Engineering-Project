@@ -114,6 +114,9 @@
 .secondary-colors {
   color: var(--secondary-color) !important;
 }
+.bg-secondary-colors {
+  background-color: var(--secondary-color) !important;
+}
 .white-colors {
   color: var(--white-color) !important;
 }
@@ -124,8 +127,14 @@
 .btn-icon-transform {
   transform: rotate(-45deg);
 }
-
+.quote_icon{
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
 .bg-Image {
+  background-image: url('/Assets/images/About_Page_Images/Background.svg');
   background-image: url("../images/About_Page_Images/Background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,12 +147,24 @@
   border-radius: 5px;
   width: 100%;
 }
-
-.categories ul li {
+.anchor_tag a{
+  cursor: pointer;
+  color:var(--secondary-color);
+  text-decoration:none
+}
+.smaller-size{
+  font-size: var(--smaller-font-size);
+}
+.categories li{
+  list-style: none;
+}
+.categories a{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 14px;
+  padding: 0;
+  
 }
 
 .comment-section h4 {
@@ -183,22 +204,6 @@
   margin: 0;
 }
 
-.comment-text {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-.reply-btn {
-  background-color: #7a5ff4;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 15px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
 .reply-form {
   margin-top: 30px;
 }
@@ -209,19 +214,6 @@
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
-
-.reply-form button {
-  background-color: #7a5ff4;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 14px;
-}
-
-.reply-form button:hover {
-  background-color: #5e44c3;
 }
 
 .form-control:focus {
@@ -467,7 +459,15 @@
   color: var(--white-color);
   font-family: "Sora", sans-serif;
 }
-
+.bg-subscribe-section {
+  background-image: url('/assets/images/Home_Page_Image/bg_blog.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 8rem;
+  border-radius: 15px;
+  color: var(--white-color);
+  font-family: 'Sora', sans-serif;
+}
 .subscribe-text {
   font-size: var(--base-font-size);
   color: var(--white-color);
@@ -483,6 +483,22 @@
     text-align: center;
     padding: 3rem;
   }
+}
+
+/* Blogs, Services Section CSS End */
+
+/* Blog Section CSS Start */
+.category {
+  padding: 6px 14px;
+  background-color: rgba(152, 103, 255, 0.1);
+  color: var(--primary-color);
+  font-size: var(--smaller-font-size);
+}
+
+.pagination .page-item {
+  width: 40px;
+  height: 40px;
+  font-size: var(--large-font-size);
 }
 
 /* Home Page CSS */
@@ -511,6 +527,29 @@
     transition: 0.3s all ease;
   }
 
+/* home css */
+/* Hero Section */
+.hero {
+  background-image: url(../images/Home_Page_Image/bg_home.png);
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-wrapper {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-image: url('/Assets/images/Home_Page_Image/Background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* card */
+.blue {
+  background-color: var(--blue-color);
+  background-image: url(/Assets/images/Home_Page_Image/bg_card.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
   .pagination .page-item a:hover {
     background: none;
     transform: translateY(-2px);
@@ -688,6 +727,7 @@
     background-size: cover;
     background-position: center;
   }
+
 
   .purple {
     background-color: var(--primary-color);
