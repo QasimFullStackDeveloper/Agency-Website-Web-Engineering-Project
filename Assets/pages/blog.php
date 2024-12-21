@@ -1,13 +1,20 @@
 <?php
 include('../config/config.php');
-$sql = "SELECT blog_heading, blog_description, blog_image FROM get_blogs";
-// echo "Blogs Cards Coming From DB At Runtime";
+// include('../utils/blogs-query.php');
+
+$page_number = isset($_GET['page_number']) ? (int)$_GET['page_number'] : 1;
+
+if ($page_number < 1) {
+  $page_number = 1;
+}
 
 try {
-  $stmt = $pdo->prepare($sql);
+  $stmt = $pdo->prepare("CALL GetBlogsPagination(:page_number)");
+  $stmt->bindParam(':page_number', $page_number, PDO::PARAM_INT);
   $stmt->execute();
 
   $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $stmt->closeCursor();
 } catch (PDOException $e) {
   die("Query failed: " . $e->getMessage());
 }
@@ -75,40 +82,36 @@ try {
       <!-- Blogs Cards Grid Container -->
       <div class="row gy-4 blogs-grid mb-5">
         <?php
-        try {
-          if (!empty($blogs)) {
-            foreach ($blogs as $blog) {
-              echo '<div class="col-12 col-md-6 col-lg-4">';
-              echo '  <div class="card blogs-card rounded-4 h-100" style="background: none !important">';
-              echo '    <img class="card-img-top rounded-top-4" src="/assets/images/blogs/' . htmlspecialchars($blog["blog_image"]) . '" alt="Maximizing Your Job Search: Insider Tips" />';
-              echo '    <div class="card-body blogs-card-body">';
-              echo '      <div class="d-flex flex-wrap mb-2">';
-              echo '        <span class="badge category me-2">Consultation</span>';
-              echo '        <span class="badge category">Uncategorized</span>';
-              echo '      </div>';
-              echo '      <h5 class="card-title text-truncate">' . htmlspecialchars($blog["blog_heading"]) . '</h5>';
-              echo '      <p class="card-text text-truncate">' . htmlspecialchars($blog["blog_description"]) . '</p>';
-              echo '      <a class="text-decoration-none fw-medium" href="#">Read More';
-              echo '        <span>';
-              echo '          <img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow icon" />';
-              echo '        </span>';
-              echo '      </a>';
-              echo '    </div>';
-              echo '  </div>';
-              echo '</div>';
-            }
-          } else {
-            echo '<p>No services available at the moment.</p>';
+        if (!empty($blogs)) {
+          foreach ($blogs as $blog) {
+            echo '<div class="col-12 col-md-6 col-lg-4">';
+            echo '  <div class="card blogs-card rounded-4 h-100" style="background: none !important">';
+            echo '    <img class="card-img-top rounded-top-4" src="/assets/images/blogs/' . htmlspecialchars($blog["blog_image"]) . '" alt="' . htmlspecialchars($blog["blog_heading"]) . '" />';
+            echo '    <div class="card-body blogs-card-body">';
+            echo '      <div class="d-flex flex-wrap mb-2">';
+            echo '        <span class="badge category me-2">' . htmlspecialchars($blog["category1"] ?? "") . '</span>';
+            echo '        <span class="badge category">' . htmlspecialchars($blog["category2"] ?? "") . '</span>';
+            echo '      </div>';
+            echo '      <h5 class="card-title text-truncate">' . htmlspecialchars($blog["blog_heading"]) . '</h5>';
+            echo '      <p class="card-text text-truncate">' . htmlspecialchars($blog["blog_description"]) . '</p>';
+            echo '      <a class="text-decoration-none fw-medium" href="#">Read More';
+            echo '        <span>';
+            echo '          <img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow icon" />';
+            echo '        </span>';
+            echo '      </a>';
+            echo '    </div>';
+            echo '  </div>';
+            echo '</div>';
           }
-        } catch (PDOException $e) {
-          echo '<p>Error fetching services: ' . htmlspecialchars($e->getMessage()) . '</p>';
+        } else {
+          echo '<p>No blogs available at the moment.</p>';
         }
         ?>
       </div>
     </div>
 
     <!-- Pagination Section Start -->
-    <nav aria-label="Page Navigation">
+    <!-- <nav aria-label="Page Navigation">
       <ul class="pagination d-flex justify-content-center align-items-center">
         <li class="page-item">
           <a
@@ -140,7 +143,50 @@ try {
           </a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
+    <?php
+    try {
+      $total_blogs_query = $pdo->query("SELECT COUNT(*) as total FROM get_blogs WHERE is_active = 1 AND is_deleted = 0");
+      $total_blogs = $total_blogs_query->fetch(PDO::FETCH_ASSOC)['total'];
+      $blogs_per_page = 6;
+      $total_pages = ceil($total_blogs / $blogs_per_page);
+    } catch (PDOException $e) {
+      die("Error fetching total blogs: " . $e->getMessage());
+    }
+
+    echo '<nav aria-label="Page Navigation">';
+    echo '<ul class="pagination d-flex justify-content-center align-items-center">';
+
+    // Previous Button
+    if ($page_number > 1) {
+      echo '<li class="page-item">';
+      echo '<a class="page-link d-flex justify-content-center align-items-center me-1" href="?page_number=' . ($page_number - 1) . '" style="font-size: 14px; color: #999999;">';
+      echo 'PREV';
+      echo '</a>';
+      echo '</li>';
+    }
+
+    // Page Buttons
+    for ($i = 1; $i <= $total_pages; $i++) {
+      $is_active = ($i == $page_number) ? 'style="background-color: #9867ff; color: white; border: #9867ff;"' : 'style="color: #999999; border: #ddd;"';
+      echo '<li class="page-item">';
+      echo '<a class="page-link rounded-circle d-flex justify-content-center me-1" ' . $is_active . ' href="?page_number=' . $i . '">' . $i . '</a>';
+      echo '</li>';
+    }
+
+    // Next Button
+    if ($page_number < $total_pages) {
+      echo '<li class="page-item">';
+      echo '<a class="page-link d-flex justify-content-center align-items-center me-1" href="?page_number=' . ($page_number + 1) . '" style="font-size: 14px; color: #999999;">';
+      echo 'NEXT';
+      echo '<img class="ms-1 mt-1" src="/assets/images/icons/greater-than.svg" alt="greater-than" />';
+      echo '</a>';
+      echo '</li>';
+    }
+
+    echo '</ul>';
+    echo '</nav>';
+    ?>
     <!-- Pagination Section End -->
   </div>
   <!-- Blogs Container End -->

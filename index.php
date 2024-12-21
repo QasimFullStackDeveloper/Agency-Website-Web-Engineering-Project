@@ -3,6 +3,7 @@ http://localhost:8000/index.php -->
 
 <?php
 include('./Assets/config/config.php');
+include('./Assets/utils/blogs-query.php');
 ?>
 
 <!DOCTYPE html>
@@ -220,109 +221,7 @@ include('./Assets/config/config.php');
         </div>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
-      <div class="col d-flex justify-content-center">
-        <div class="card rounded-4 h-100" style="max-width: 350px">
-          <div class="card-body px-4 pt-4 pb-0">
-            <h5 class="card-title fw-semibold lh-lg">
-              Recruitment Solution
-            </h5>
-            <p class="fw-normal card-text lh-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium dolor…
-            </p>
-            <a class="text-decoration-none" href="#">Explore Now
-              <span><img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow" /></span></a>
-            <br />
-          </div>
-          <img class="rounded-4 img-fluid" src="/assets/images/services/cardsImages/2.svg" alt="card-pic" />
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card rounded-4 h-100" style="max-width: 350px">
-          <div class="card-body px-4 pt-4 pb-0">
-            <h5 class="card-title fw-semibold lh-lg">
-              Personnel Outsourcing
-            </h5>
-            <p class="fw-normal card-text lh-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium dolor…
-            </p>
-            <a class="text-decoration-none" href="#">Explore Now
-              <span><img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow" /></span></a>
-            <br />
-          </div>
-          <img class="rounded-4 img-fluid" src="/assets/images/services/cardsImages/1.svg" alt="card-pic" />
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card rounded-4 h-100" style="max-width: 350px">
-          <div class="card-body px-4 pt-4 pb-0">
-            <h5 class="card-title fw-semibold lh-lg">HR Consulting</h5>
-            <p class="fw-normal card-text lh-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium dolor…
-            </p>
-            <a class="text-decoration-none" href="#">Explore Now
-              <span><img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow" /></span></a>
-            <br />
-          </div>
-          <img class="rounded-4 img-fluid" src="/assets/images/services/cardsImages/3.svg" alt="card-pic" />
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card rounded-4 h-100" style="max-width: 350px">
-          <div class="card-body px-4 pt-4 pb-0">
-            <h5 class="card-title fw-semibold lh-lg">
-              Leadership Training
-            </h5>
-            <p class="fw-normal card-text lh-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium dolor…
-            </p>
-            <a class="text-decoration-none" href="#">Explore Now
-              <span><img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow" /></span></a>
-            <br />
-          </div>
-          <img class="rounded-4 img-fluid" src="/assets/images/services/cardsImages/4.svg" alt="card-pic" />
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card rounded-4 h-100" style="max-width: 350px">
-          <div class="card-body px-4 pt-4 pb-0">
-            <h5 class="card-title fw-semibold lh-lg">Improving Resource</h5>
-            <p class="fw-normal card-text lh-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium dolor…
-            </p>
-            <a class="text-decoration-none" href="#">Explore Now
-              <span><img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow" /></span></a>
-            <br />
-          </div>
-          <img class="rounded-4 img-fluid" src="/assets/images/services/cardsImages/5.svg" alt="card-pic" />
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card rounded-4 h-100" style="max-width: 350px">
-          <div class="card-body px-4 pt-4 pb-0">
-            <h5 class="card-title fw-semibold lh-lg">Employee Training</h5>
-            <p class="fw-normal card-text lh-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium dolor…
-            </p>
-            <a class="text-decoration-none" href="#">Explore Now
-              <span><img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow" /></span></a>
-            <br />
-          </div>
-          <img class="rounded-4 img-fluid" src="/assets/images/services/cardsImages/6.svg" alt="card-pic" />
-        </div>
-      </div>
-    </div>
+    <?php include('./Assets/utils/services-grid.php'); ?>
   </div>
   <!-- How We Work -->
   <div class="bg-Image my-4">
@@ -424,84 +323,39 @@ include('./Assets/config/config.php');
     <p class="primary-colors mb-0 text-center">/ our Blogs /</p>
     <h1 class="text-center fw-semibold mb-5">Explore Our Latest Articles</h1>
     <div class="row blogs-grid g-4">
-      <!-- Card 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card blogs-card rounded-4 h-100" style="background: none !important">
-          <img class="card-img-top rounded-top-4" src="/assets/images/blogs/5.svg"
-            alt="How to Attract Top Talent to Your" />
-          <div class="card-body blogs-card-body">
-            <div class="d-flex flex-wrap mb-2">
-              <span class="badge category me-2">IT Companies</span>
-              <span class="badge category">Uncategorized</span>
-            </div>
-            <h5 class="card-title text-truncate">
-              How to Attract Top Talent To Your…
-            </h5>
-            <p class="card-text text-truncate">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantiu…
-            </p>
-            <a class="text-decoration-none fw-medium" href="#">
-              Read More
-              <span>
-                <img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow icon" />
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card blogs-card rounded-4 h-100" style="background: none !important">
-          <img class="card-img-top rounded-top-4" src="/assets/images/blogs/6.svg"
-            alt="Emerging Job Market Trends for 2024" />
-          <div class="card-body blogs-card-body">
-            <div class="d-flex flex-wrap mb-2">
-              <span class="badge category me-2">Ecommerce</span>
-              <span class="badge category">IT Companies</span>
-            </div>
-            <h5 class="card-title text-truncate">
-              Emerging Job Market Trends for 2024
-            </h5>
-            <p class="card-text text-truncate">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantiu…
-            </p>
-            <a class="text-decoration-none fw-medium" href="#">
-              Read More
-              <span>
-                <img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow icon" />
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card blogs-card rounded-4 h-100" style="background: none !important">
-          <img class="card-img-top rounded-top-4" src="/assets/images/blogs/1.svg"
-            alt="Maximizing Your Job Search: Insider Tips" />
-          <div class="card-body blogs-card-body">
-            <div class="d-flex flex-wrap mb-2">
-              <span class="badge category me-2">Consultation</span>
-              <span class="badge category">Uncategorized</span>
-            </div>
-            <h5 class="card-title text-truncate">
-              Maximizing Your Job Search: Insider Tips
-            </h5>
-            <p class="card-text text-truncate">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantiu…
-            </p>
-            <a class="text-decoration-none fw-medium" href="#">
-              Read More
-              <span>
-                <img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow icon" />
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <?php
+      try {
+        if (!empty($blogs)) {
+          $limitedBlogs = array_slice($blogs, 0, 3);
+
+          foreach ($limitedBlogs as $blog) {
+            echo '<div class="col-12 col-md-6 col-lg-4">';
+            echo '  <div class="card blogs-card rounded-4 h-100" style="background: none !important">';
+            echo '    <img class="card-img-top rounded-top-4" src="/assets/images/blogs/' . htmlspecialchars($blog["blog_image"]) . '" alt="' . htmlspecialchars($blog["blog_heading"]) . '" />';
+            echo '    <div class="card-body blogs-card-body">';
+            echo '      <div class="d-flex flex-wrap mb-2">';
+            echo '        <span class="badge category me-2">' . htmlspecialchars($blog["category1"]) . '</span>';
+            echo '        <span class="badge category">' . htmlspecialchars($blog["category2"]) . '</span>';
+            echo '      </div>';
+            echo '      <h5 class="card-title text-truncate">' . htmlspecialchars($blog["blog_heading"]) . '</h5>';
+            echo '      <p class="card-text text-truncate">' . htmlspecialchars($blog["blog_description"]) . '</p>';
+            echo '      <a class="text-decoration-none fw-medium" href="#">Read More';
+            echo '        <span>';
+            echo '          <img class="pb-1 ms-1" src="/assets/images/icons/arrow.svg" alt="arrow icon" />';
+            echo '        </span>';
+            echo '      </a>';
+            echo '    </div>';
+            echo '  </div>';
+            echo '</div>';
+          }
+        } else {
+          echo '<p>No blogs available at the moment.</p>';
+        }
+      } catch (PDOException $e) {
+        echo '<p>Error fetching blogs: ' . htmlspecialchars($e->getMessage()) . '</p>';
+      }
+      ?>
+
     </div>
   </div>
   <!-- Contact Us Form -->
