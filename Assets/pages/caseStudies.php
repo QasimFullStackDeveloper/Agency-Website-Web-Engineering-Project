@@ -1,7 +1,7 @@
 <?php
-include('/University Documents/5th Semester/Web Engineering (WE)/Project/Agency-Website-Web-Engineering-Project-main Latest/config/config.php');
-
+include('../config/config.php');
 $sql = "SELECT blog_image FROM get_blogs";
+// echo "Case Studies Coming From DB At Runtime";
 
 try {
   $stmt = $pdo->prepare($sql);

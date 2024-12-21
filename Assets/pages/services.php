@@ -1,7 +1,7 @@
 <?php
-include('/University Documents/5th Semester/Web Engineering (WE)/Project/Agency-Website-Web-Engineering-Project-main Latest/config/config.php');
-
+include('../config/config.php');
 $sql = "SELECT services_heading, services_description, services_image FROM get_services_poster";
+// echo "Services Cards Coming From DB At Runtime";
 
 try {
   $stmt = $pdo->prepare($sql);

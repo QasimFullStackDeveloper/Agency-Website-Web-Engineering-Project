@@ -2,7 +2,7 @@
 http://localhost:8000/index.php -->
 
 <?php
-include('config/config.php');
+include('./Assets/config/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ include('config/config.php');
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transperant">
     <div class="container">
       <!-- Logo -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/index.php">
         <img src="/assets/images/logo/logo.svg" alt="Logo" height="40" />
       </a>
       <button
