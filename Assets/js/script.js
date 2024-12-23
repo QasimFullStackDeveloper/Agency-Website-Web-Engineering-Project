@@ -74,35 +74,4 @@ $(document).ready(function () {
             setActiveLink(navLinks.first());
         }
     });
-
-    $(document).on('DOMNodeInserted', '.ActiveSide_bar', function () {
-        const sideLinks = $('.sidebar .side-link');
-
-        function setActiveLink(clickedLink) {
-            navLinks.removeClass('active');
-            if (clickedLink) {
-                $(clickedLink).addClass('active');
-            }
-        }
-
-        navLinks.each(function () {
-            $(this).on('click', function () {
-                setActiveLink(this);
-            });
-        });
-        
-        const currentPath = window.location.pathname;
-        let activeLinkFound = false;
-
-        navLinks.each(function () {
-            if ($(this).attr('href') === currentPath) {
-                setActiveLink(this);
-                activeLinkFound = true;
-            }
-        });
-
-        if (!activeLinkFound) {
-            setActiveLink(sideLinks.first());
-        }
-    });
 });
