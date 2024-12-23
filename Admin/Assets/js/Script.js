@@ -30,3 +30,6 @@ $(document).ready(function () {
         }
     });
 });
+$(document).ready(function () {
+    $('#SideBar').load('/Admin/Assets/Pages/Sidebar.html');
+});

@@ -54,39 +54,50 @@
         <div class="row">
             <!-- Sidebar -->
             <span class="col-2" id="SideBar"></span>
+
             <!-- Main Content -->
             <div class="col-10 p-4">
-                <h3 class="fw-bold">Blog</h3>
+                <h3 class="fw-bold">FAQ</h3>
                 <div class="dashboard-card">
                     <div class="d-flex justify-content-between">
-                        <h5>Blog Details</h5>
+                        <h5>FAQ Question</h5>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Add New Blog
+                            data-bs-target="#staticBackdrop1">
+                            Add New Question
                         </button>
                         <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdrop1Label" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Blog</h1>
+                                        <h1 class="modal-title fs-5" id="staticBackdrop1Label">Add Question</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <!-- Blog Form -->
+                                        <!-- FAQ Form -->
                                         <form class="row g-3">
                                             <div class="col-12">
-                                                <label for="Name" class="form-label">Enter Blog Name</label>
+                                                <label for="Name" class="form-label">Enter Question 01</label>
                                                 <input type="text" class="form-control" id="Name">
                                             </div>
                                             <div class="col-12">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Enter
-                                                    Description</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                    rows="3"></textarea>
+                                                <label for="Name" class="form-label">Enter Question 02</label>
+                                                <input type="text" class="form-control" id="Name">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="Name" class="form-label">Enter Question 03</label>
+                                                <input type="text" class="form-control" id="Name">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="Name" class="form-label">Enter Question 04</label>
+                                                <input type="text" class="form-control" id="Name">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="Name" class="form-label">Enter Question 05</label>
+                                                <input type="text" class="form-control" id="Name">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="IsActive" class="form-label">IsActive</label>
@@ -95,19 +106,6 @@
                                             <div class="col-md-6">
                                                 <label for="IsDeleted" class="form-label">IsDeleted</label>
                                                 <input type="text" class="form-control" id="IsDeleted">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="ServiceRequest" class="form-label">Blog Request</label>
-                                                <select id="ServiceRequest" class="form-select">
-                                                    <option selected>Choose...</option>
-                                                    <option>Service Request A</option>
-                                                    <option>Service Request B</option>
-                                                    <option>Service REquest C</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="formFile" class="form-label">Enter Image</label>
-                                                <input class="form-control" type="file" id="formFile">
                                             </div>
                                         </form>
                                     </div>
@@ -123,10 +121,8 @@
                     <table class="table table-borderless align-middle mt-3">
                         <thead>
                             <tr>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Service Request</th>
+                                <th>Question</th>
+                                <th>Answer</th>
                                 <th>IsActive</th>
                                 <th>IsDeleted</th>
                                 <th>Actions</th>
@@ -134,15 +130,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Blog 1 -->
+                            <!-- Service 1 -->
                             <tr>
-                                <td>
-                                    <img src="/Admin/Assets/Admin Image/user1.svg" alt="profile"
-                                        class="profile-pic me-2">
-                                </td>
-                                <td>Ali Mujeed</td>
-                                <td>Description</td>
-                                <td>Request For A</td>
+                                <td>Question Here</td>
+                                <td>Answer</td>
                                 <td class="text-success">Yes</td>
                                 <td class="text-success">Yes</td>
                                 <td>
@@ -178,59 +169,58 @@
                                         </div>
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop1">
+                                            data-bs-target="#staticBackdrop2">
                                             Edit
                                         </button>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+                                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static"
                                             data-bs-keyboard="false" tabindex="-1"
-                                            aria-labelledby="staticBackdrop1Label" aria-hidden="true">
+                                            aria-labelledby="staticBackdrop2Label" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="staticBackdrop1Label">Edit Blog
-                                                        </h1>
+                                                        <h1 class="modal-title fs-5" id="staticBackdrop2Label">Edit
+                                                            Service</h1>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <!-- Blog Form -->
+                                                        <!-- FAQ Form -->
                                                         <form class="row g-3">
                                                             <div class="col-12">
-                                                                <label for="Name" class="form-label">Edit Blog
-                                                                    Name</label>
+                                                                <label for="Name" class="form-label">Enter Question
+                                                                    01</label>
                                                                 <input type="text" class="form-control" id="Name">
                                                             </div>
                                                             <div class="col-12">
-                                                                <label for="exampleFormControlTextarea1"
-                                                                    class="form-label">Edit
-                                                                    Description</label>
-                                                                <textarea class="form-control"
-                                                                    id="exampleFormControlTextarea1"
-                                                                    rows="3"></textarea>
+                                                                <label for="Name" class="form-label">Enter Question
+                                                                    02</label>
+                                                                <input type="text" class="form-control" id="Name">
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label for="Name" class="form-label">Enter Question
+                                                                    03</label>
+                                                                <input type="text" class="form-control" id="Name">
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label for="Name" class="form-label">Enter Question
+                                                                    04</label>
+                                                                <input type="text" class="form-control" id="Name">
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <label for="Name" class="form-label">Enter Question
+                                                                    05</label>
+                                                                <input type="text" class="form-control" id="Name">
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <label for="IsActive" class="form-label">IsActive</label>
+                                                                <label for="IsActive"
+                                                                    class="form-label">IsActive</label>
                                                                 <input type="text" class="form-control" id="IsActive">
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <label for="IsDeleted" class="form-label">IsDeleted</label>
+                                                                <label for="IsDeleted"
+                                                                    class="form-label">IsDeleted</label>
                                                                 <input type="text" class="form-control" id="IsDeleted">
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label for="ServiceRequest" class="form-label">Edit Blog
-                                                                    Request</label>
-                                                                <select id="ServiceRequest" class="form-select">
-                                                                    <option selected>Choose...</option>
-                                                                    <option>Service Request A</option>
-                                                                    <option>Service Request B</option>
-                                                                    <option>Service REquest C</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <label for="formFile" class="form-label">Edit
-                                                                    Image</label>
-                                                                <input class="form-control" type="file" id="formFile">
                                                             </div>
                                                         </form>
                                                     </div>
